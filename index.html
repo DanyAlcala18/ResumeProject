@@ -3,77 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume
-    </title>
+    <title>Rodolfo Alcala - Resume</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: var(--secondary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+            margin-top: 25px;
+        }
+        
+        img {
+            border-radius: 50%;
+            border: 3px solid var(--secondary-color);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0), var(--secondary-color), rgba(0,0,0,0));
+            margin: 30px 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        
+        .experience-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .experience-details {
+            padding-left: 20px;
+            margin-top: 5px;
+            color: var(--text-color);
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-item {
+            background-color: var(--light-color);
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .links {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .links a {
+            text-decoration: none;
+            color: white;
+            background-color: var(--secondary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>RODOLFO ALCALA</h1>
-    <img src="assets/ccea3ee1-91a4-4c37-bca4-c76762bb6b77.jpg" height="150" alt="My picture">
-    <h2>Summary </h2>
-    <p> I am a communicative person, friendly and able to adapt to
-        every situation. I am looking for a job opportunity in which I
-        can develop professionally and demonstrate my
-        commitment and capacity for individual and team work. I
-        possess strong problem solving skills, network
-        maintenance, computer systems, principles of finance and
-        logistics, I stand out for my capacity for continuous learning.</p>
+    <header>
+        <div>
+            <h1>RODOLFO ALCALA</h1>
+            <p style="color: var(--text-light); font-style: italic;">Engineer in Internet Technologies</p>
+        </div>
+        <img src="assets/ccea3ee1-91a4-4c37-bca4-c76762bb6b77.jpg" height="150" alt="My picture">
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p>I am a communicative person, friendly and able to adapt to every situation. I am looking for a job opportunity in which I can develop professionally and demonstrate my commitment and capacity for individual and team work. I possess strong problem solving skills, network maintenance, computer systems, principles of finance and logistics, I stand out for my capacity for continuous learning.</p>
+    </section>
         
     <hr />
-    <h2>Education </h2>
-    <ul>
-<li> ENGINEER IN INTERNET TECHNOLOGIES (2020-2024) 🧑‍🎓​ </li>
-    </ul>
-    <hr />
-    <h2>Work experience</h2>
-    <ul>
-<li>KROM ADUANAL MANZANILLO COL - IT SUPPORT 🛜​ </li>
-<ul>
-    <li>Attention to users, configuration of local area networks and
-        network devices, resolution of hardware incidents,
-        configuration and optimization of network operation,
-        network mapping, preventive and corrective maintenance in
-        programs and equipment.</li>
-</ul>
-</ul>
-<ul>
-<li> LOGISTICS AREA - SICARFARMS TECOMAN COL. - LOGISTICS COORDINATOR 🚚​</li>
-<ul>
-    <li> Realization of consignment notes, constant contact with
-        the customer for follow-up of loading and unloading,
-        contact with the operators on their trips, remote support
-        on mechanical problems of the transports looking for
-        solutions close to your position.</li>
-</ul>
-</ul>
-    <hr/>
-    <h2>Skills </h2>
-    <ul>
-
-       <li>Adaptive spirit. ✅</li> 
-     <li>Fast learner. ✅</li>   
-        <li>Good communication skills. ✅ </li>
-       <li>Equipment support. ✅</li> 
-       <li>Team diagnosis. ✅</li>
-        <li>Team work. ✅</li>
-        <li>Problem solving. ✅</li>
-
-    </ul>
+    
+    <section>
+        <h2>Education</h2>
+        <div class="experience-item">
+            <div class="experience-title">
+                <span>ENGINEER IN INTERNET TECHNOLOGIES (2020-2024)</span>
+                <span>🧑‍🎓</span>
+            </div>
+        </div>
+    </section>
     
     <hr />
-    <h2>Awards and Certifications</h2>
-
-    <ul>
-<li>Diplomado en Tecnologías de información  para la innovación y desarrollo. Universidad De Colima (2025)</li>
-    </ul>
+    
+    <section>
+        <h2>Work Experience</h2>
+        <div class="experience-item">
+            <div class="experience-title">
+                <span>KROM ADUANAL MANZANILLO COL - IT SUPPORT</span>
+                <span>🛜</span>
+            </div>
+            <div class="experience-details">
+                <p>Attention to users, configuration of local area networks and network devices, resolution of hardware incidents, configuration and optimization of network operation, network mapping, preventive and corrective maintenance in programs and equipment.</p>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="experience-title">
+                <span>LOGISTICS AREA - SICARFARMS TECOMAN COL. - LOGISTICS COORDINATOR</span>
+                <span>🚚</span>
+            </div>
+            <div class="experience-details">
+                <p>Realization of consignment notes, constant contact with the customer for follow-up of loading and unloading, contact with the operators on their trips, remote support on mechanical problems of the transports looking for solutions close to your position.</p>
+            </div>
+        </div>
+    </section>
+    
+    <hr/>
+    
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">✅ Adaptive spirit</div>
+            <div class="skill-item">✅ Fast learner</div>
+            <div class="skill-item">✅ Good communication skills</div>
+            <div class="skill-item">✅ Equipment support</div>
+            <div class="skill-item">✅ Team diagnosis</div>
+            <div class="skill-item">✅ Team work</div>
+            <div class="skill-item">✅ Problem solving</div>
+        </div>
+    </section>
+    
+    <hr />
+    
+    <section>
+        <h2>Awards and Certifications</h2>
+        <div class="experience-item">
+            <p>Diplomado en Tecnologías de información para la innovación y desarrollo. Universidad De Colima (2025)</p>
+        </div>
+    </section>
 
     <hr />
-    <h2>Other</h2>
-    <a href="public/contact.html">Contact Me</a>
-    <a href="public/hobies.html">My Hobbies</a>
+    
+    <section>
+        <h2>Other</h2>
+        <div class="links">
+            <a href="public/contact.html">Contact Me</a>
+            <a href="public/hobies.html">My Hobbies</a>
+        </div>
+    </section>
     
     <footer>
         <p>© 2025 R. Alcala - All rights reserved.</p>
     </footer>
-    <hr />
 </body>
 </html>
