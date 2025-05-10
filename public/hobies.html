@@ -4,91 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Hobbies</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
             --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --text-light: #7f8c8d;
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #f8f9fa;
         }
         
-        h1 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+        .hobbies-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 10px 10px;
         }
         
-        .hobbies-container {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+        .hobby-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
         }
         
-        ol {
-            padding-left: 20px;
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
         
-        li {
-            margin-bottom: 15px;
-            padding: 12px 15px;
-            background-color: var(--light-color);
-            border-radius: 5px;
-            transition: transform 0.2s ease;
+        .hobby-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
         }
         
-        li:hover {
-            transform: translateX(5px);
-            background-color: #e0f2ff;
+        .hobby-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .hobby-card:hover .hobby-img {
+            transform: scale(1.05);
+        }
+        
+        .hobby-content {
+            padding: 1.5rem;
         }
         
         footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            color: var(--text-light);
-            font-size: 0.9em;
-        }
-        
-        hr {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(0,0,0,0), var(--secondary-color), rgba(0,0,0,0));
-            margin: 30px 0;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
-    <h1>My Hobbies</h1>
-    
-    <div class="hobbies-container">
-        <ol>
-            <li>Listen to Music.</li>
-            <li>Watch Movies and Series.</li>
-            <li>Play Videogames.</li>
-            <li>Travel.</li>
-            <li>Learn a Lot of New Things.</li>
-        </ol>
+    <header class="hobbies-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">My Hobbies</h1>
+            <p class="lead">Things I enjoy doing in my free time</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <!-- Listening to Music -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card hobby-card h-100">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top hobby-img" alt="Listening to Music">
+                    <div class="hobby-content">
+                        <div class="text-center">
+                            <i class="fas fa-music hobby-icon"></i>
+                        </div>
+                        <h3 class="h5 text-center">Listen to Music</h3>
+                        <p class="card-text">Exploring different genres and discovering new artists is one of my favorite ways to relax.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Watching Movies -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card hobby-card h-100">
+                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top hobby-img" alt="Watching Movies">
+                    <div class="hobby-content">
+                        <div class="text-center">
+                            <i class="fas fa-film hobby-icon"></i>
+                        </div>
+                        <h3 class="h5 text-center">Watch Movies and Series</h3>
+                        <p class="card-text">I enjoy analyzing film techniques and storytelling in both movies and TV series.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playing Videogames -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card hobby-card h-100">
+                    <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top hobby-img" alt="Playing Videogames">
+                    <div class="hobby-content">
+                        <div class="text-center">
+                            <i class="fas fa-gamepad hobby-icon"></i>
+                        </div>
+                        <h3 class="h5 text-center">Play Videogames</h3>
+                        <p class="card-text">Gaming helps me unwind and appreciate interactive storytelling and game design.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card hobby-card h-100">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top hobby-img" alt="Travel">
+                    <div class="hobby-content">
+                        <div class="text-center">
+                            <i class="fas fa-plane hobby-icon"></i>
+                        </div>
+                        <h3 class="h5 text-center">Travel</h3>
+                        <p class="card-text">Exploring new cultures and places broadens my perspective and creates memorable experiences.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card hobby-card h-100">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top hobby-img" alt="Learning">
+                    <div class="hobby-content">
+                        <div class="text-center">
+                            <i class="fas fa-book hobby-icon"></i>
+                        </div>
+                        <h3 class="h5 text-center">Learn New Things</h3>
+                        <p class="card-text">I'm passionate about continuous learning, whether it's technology, languages, or new skills.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coding Projects -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card hobby-card h-100">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" class="card-img-top hobby-img" alt="Coding">
+                    <div class="hobby-content">
+                        <div class="text-center">
+                            <i class="fas fa-code hobby-icon"></i>
+                        </div>
+                        <h3 class="h5 text-center">Coding Projects</h3>
+                        <p class="card-text">Working on personal coding projects helps me grow as a developer and solve interesting problems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <footer>
-        <p>© 2025 R. Alcala - All rights reserved.</p>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2025 R. Alcala - All rights reserved.</p>
+        </div>
     </footer>
-    <hr />
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
